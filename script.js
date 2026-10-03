@@ -15,7 +15,6 @@
 // }
 // console.log(arr);
 
-
 // find the max value of array
 // let arr = [20, 59, 10, 28, 29]
 // let max = arr[0];
@@ -23,12 +22,12 @@
 //     if(max<arr[i]){
 //         max = arr[i]
 //     }
-    
+
 // }
 // console.log(max)
 
 //find the second max value of array
-// let arr = [10, 59, 39, 30, 93, 48]; 
+// let arr = [10, 59, 39, 30, 93, 48];
 // let max = Math.max(arr[0], arr[1])
 // let smax = Math.min(arr[0], arr[1])
 
@@ -42,19 +41,18 @@
 // }
 // console.log(smax)
 
-
-//reverse array 
+//reverse array
 // let arr = [10, 20,  30, 40, 50];
 // let temp = new Array(arr.length)
 // let j = 0;
 
 // for(let i=arr.length-1; i>=0; i--){
-//     temp[j] = arr[i]; 
+//     temp[j] = arr[i];
 //     j++;
 // }
 // console.log(temp)
 
-//reverse array second devision 
+//reverse array second devision
 // let arr = [10, 20, 30, 40, 50];
 // let i = 0, j = arr.length-1
 
@@ -81,8 +79,6 @@
 //   i++
 // }
 // console.log(arr)
-
-
 
 // let arr = [-2, 3, -3, 9, -2, 9, -6];
 
@@ -114,25 +110,36 @@
 
 // console.log(arr);
 
-
-// let left rotation by 1 element 
+// let left rotation by 1 element
 // let arr = [1, 2, 3, 4, 5]
 // let copy = arr[0];
 
 // for(let i=0; i<arr.length-1; i++){
 //     arr[i] = arr[i+1]
 // }
-//  arr[arr.length-1] = copy 
+//  arr[arr.length-1] = copy
 
 //  console.log(arr);
 
-// let right rotation by 1 element 
-let arr = [1,2,3,4,5]
-let copy = arr[arr.length-1]
+// let right rotation by 1 element
+// let arr = [1,2,3,4,5]
+// let copy = arr[arr.length-1]
 
-for(let i=arr.length-1; i>0; i--){
-   arr[i] = arr[i-1]
+// for(let i=arr.length-1; i>0; i--){
+//    arr[i] = arr[i-1]
+// }
+//   arr[0] = copy
+
+//   console.log(arr);
+
+// left rotation by 2 element
+let arr = [1, 2, 3, 4, 5];
+let k = Number(prompt("enter k number "));
+for (let j = 0; j < k; j++) {
+  let copy = arr[0];
+  for (let i = 0; i < arr.length - 1; i++) {
+    arr[i] = arr[i + 1];
+  }
+  arr[arr.length - 1] = copy;
 }
-  arr[0] = copy
-
-  console.log(arr);
+console.log(arr);
