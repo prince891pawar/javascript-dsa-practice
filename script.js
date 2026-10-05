@@ -133,13 +133,27 @@
 //   console.log(arr);
 
 // left rotation by 2 element
-let arr = [1, 2, 3, 4, 5];
-let k = Number(prompt("enter k number "));
-for (let j = 0; j < k; j++) {
-  let copy = arr[0];
-  for (let i = 0; i < arr.length - 1; i++) {
-    arr[i] = arr[i + 1];
-  }
-  arr[arr.length - 1] = copy;
+// let arr = [1, 2, 3, 4, 5];
+// let k = Number(prompt("enter k number "));
+// for (let j = 0; j < k; j++) {
+//   let copy = arr[0];
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     arr[i] = arr[i + 1];
+//   }
+//   arr[arr.length - 1] = copy;
+// }
+// console.log(arr);
+
+
+// rotation array value by k time
+let arr = [1,2,3,4,5];
+let k = Number(prompt("enter k value"))
+
+for(let j=0; j<k; j++){
+    let copy = arr[0]
+    for(let i=0; i<arr.length-1; i++){
+      arr[i] = arr[i+1]
+}
+  arr[arr.length-1] = copy
 }
 console.log(arr);
