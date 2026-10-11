@@ -146,14 +146,26 @@
 
 
 // rotation array value by k time
-let arr = [1,2,3,4,5];
-let k = Number(prompt("enter k value"))
+// let arr = [1,2,3,4,5];
+// let k = Number(prompt("enter k value"))
 
-for(let j=0; j<k; j++){
-    let copy = arr[0]
-    for(let i=0; i<arr.length-1; i++){
-      arr[i] = arr[i+1]
+// for(let j=0; j<k; j++){
+//     let copy = arr[0]
+//     for(let i=0; i<arr.length-1; i++){
+//       arr[i] = arr[i+1]
+// }
+//   arr[arr.length-1] = copy
+// }
+// console.log(arr);
+
+
+let arr = [1, 2, 3, 4, 5]
+let temp = new Array(arr.length)
+
+let k = Number(prompt("enter k value"))
+k = k % arr.length
+
+for(let i=0; i<arr.length; i++){
+      temp[i] = arr[i+k%arr.length]
 }
-  arr[arr.length-1] = copy
-}
-console.log(arr);
+console.log(temp);
