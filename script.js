@@ -159,13 +159,32 @@
 // console.log(arr);
 
 
-let arr = [1, 2, 3, 4, 5]
-let temp = new Array(arr.length)
+// let arr = [1, 2, 3, 4, 5]
+// let temp = new Array(arr.length)
 
-let k = Number(prompt("enter k value"))
+// let k = Number(prompt("enter k value"))
+// k = k % arr.length
+
+// for(let i=0; i<arr.length; i++){
+//       temp[i] = arr[(i+k)%arr.length]
+// }
+// console.log(temp);
+
+let arr = [1,2,3,4,5]
+let k = Number(prompt('enter k value'))
 k = k % arr.length
 
-for(let i=0; i<arr.length; i++){
-      temp[i] = arr[i+k%arr.length]
+reverse(0, arr.length-1)
+reverse(0, k-1)
+reverse(k, arr.length-1)
+
+function reverse(i, j){
+    while(i<j){
+        let temp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = temp
+        i++
+        j--
+    }
 }
-console.log(temp);
+console.log(arr);
